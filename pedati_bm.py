@@ -10,7 +10,7 @@ st.title("🎓 Penjana Rancangan Mengajar PEDATI")
 
 # --- INPUT KUNCI API (DI ATAS TOPIK) ---
 user_api_key = st.text_input(
-    "🔑 Masukkan Kunci API Gemini Anda:", 
+    "🔑 Masukkan Kunci Rahsia API Gemini Anda:", 
     type="password", 
     help="Dapatkan kunci API anda dari Google AI Studio menggunakan akaun Gmail anda."
 )
@@ -118,7 +118,7 @@ def create_word_export(topic, syllabus, text):
             table = doc.add_table(rows=1, cols=3)
             table.style = 'Table Grid'
             hdr = table.rows[0].cells
-            hdr[0].text, hdr[1].text, hdr[2].text = 'Peringkat (PEDATI)', 'Guru / Fasilitator (CB)', 'Murid (SB)'
+            hdr[0].text, hdr[1].text, hdr[2].text = 'Peringkat (PEDATI)', 'Pensyarah(Tutor)', 'Pelajar(Penuntut)'
 
             for line in content_lines:
                 if "|" in line:
@@ -134,7 +134,7 @@ def create_word_export(topic, syllabus, text):
 
     # 4. Halaman Kelulusan HKP (HOD Approval)
     doc.add_page_break()
-    doc.add_heading("Kelulusan & Ulasan HKP / Ketua Jabatan", level=1)
+    doc.add_heading("Kelulusan & Ulasan Pengetua / Ketua Jabatan", level=1)
     hod_table = doc.add_table(rows=3, cols=2)
     hod_table.style = 'Table Grid'
     hod_table.cell(0, 0).text = "Ulasan / Catatan"
@@ -180,7 +180,7 @@ st.markdown(
     <div style='text-align: center; color: grey; font-size: 0.8em;'>
         <p><b>Smart PEDATI Lesson Plan AI-Generator (Versi BM) v1.0</b></p>
         <p>Developed & Conceptualized by: <b> Hajah Nurul Haziqah @ Hjh Hartini Hj Nordin </b></p>
-        <p>© 2026 PTES Academic Innovation Computer Science</p>
+        <p>© 2026 BSc.M.(H) Computer Science, Strathclyde University</p>
     </div>
     """,
     unsafe_allow_html=True
