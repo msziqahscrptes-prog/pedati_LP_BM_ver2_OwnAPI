@@ -46,6 +46,7 @@ def generate_pedati_plan(topic, syllabus, extra_context, api_key, model_name):
     prompt = f"""
     Topik: {topic}. Kod Silibus: {syllabus}. Konteks Tambahan: {extra_context}.
     Janakan rancangan mengajar dalam Bahasa Melayu sepenuhnya. 
+    Jangan guna perkataan 'Murid', gantikan ia dengan perkataan 'Pelajar'.
     Gunakan nama peringkat PEDATI yang tepat seperti berikut:
     P [Pengetahuan Sedia Ada], E [Empati / Penglibatan], D [Daya Upaya / Perkembangan], A [Aplikasi], T [Taksir], I [Improvisasi / Penambahbaikan].
 
